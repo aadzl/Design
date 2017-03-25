@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            menubar: false,
+            statusbar: false,
+            toolbar1: 'undo redo | styleselect | bold italic underline | link unlink image | alignleft aligncenter alignright alignjustify | bullist numlist | blockquote | code fullscreen',
+            file_picker_types: 'file image media'
+
+        });
+    </script>
+    <style>
+        .wrap {
+            position: relative;
+            padding: 100px;
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+        }
+
+        .mce-tinymce {
+            position: static !important;
+        }
+
+        .mce-toolbar-grp {
+            position: absolute !important;
+            top: 0;
+        }
+
+        iframe,
+        .mce-edit-area,
+        .mce-container-body .mce-stack-layout {
+            border: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <br><br><br><br><br><br>
+    <div class="wrap">
+        <input type="text" class="form-control" placeholder="Title ..." autofocus>
+        <form method="post">
+            <textarea id="mytextarea" autofocus>Hello, World!</textarea>
+        </form>
+    </div>
+</body>
+
+</html>
