@@ -39,10 +39,52 @@
 </div>
  <div class="app-content posts">
     <div class="posts-list">
-        <div class="posts-list-header">
-            <input type="checkbox"> <button type="button" class="btn btn-block btn-success">New Post</button>
+        <div class="posts-list-header clearfix">
+            <input type="checkbox">
+            <button type="button" class="btn btn-success btn-block">New Post</button>
+            <div class="dropdown">
+              <i class="dropdown-toggle fa fa-filter" id="filterDropdown" data-toggle="dropdown"></i>
+              <div class="dropdown-menu" aria-labelledby="filterDropdown">
+
+                <select class="form-control mb-2">
+                  <option value="">Tag 1</option>
+                  <option value="">Tag 2</option>
+                  <option value="">Tag 3</option>
+                  <option value="">Tag 4</option>
+                </select>
+                <select class="form-control">
+                  <optgroup label="2017">
+                    <option value=""> January</option>
+                    <option value=""> February</option>
+                    <option value=""> March</option>
+                    <option value=""> April</option>
+                    <option value=""> May</option>
+                    <option value=""> June</option>
+                    <option value=""> July</option>
+                  </optgroup>
+                  <optgroup label="2016">
+                    <option value=""> January</option>
+                    <option value=""> February</option>
+                    <option value=""> March</option>
+                    <option value=""> April</option>
+                    <option value=""> May</option>
+                    <option value=""> June</option>
+                    <option value=""> July</option>
+                  </optgroup>
+
+                </select>
+
+              </div>
+            </div>
         </div>
         <ul>
+          <li class="tools-selected">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary"><i class="fa fa-trash"></i></button>
+              <button type="button" class="btn btn-secondary"><i class="fa fa-remove"></i></button>
+              <button type="button" class="btn btn-secondary"><i class="fa fa-check"></i></button>
+            </div>
+          </li>
             <li><input type="checkbox"> <a href="#">Title of Post Goes here and you know it</a></li>
             <li><input type="checkbox"> <a href="#">Title of Post Goes here and you know it</a></li>
             <li class="active"><input type="checkbox"> <a href="#">Title of Post Goes here and you know it</a></li>
@@ -81,10 +123,9 @@
                 and unique within Disqus. For example I could add "rturnet" as site name and provide "http://rtur.net/blog" as site URL.</p>
             <h3>Exporting from BlogEngine</h3>
             <p>Navigate to admin panel in BlogEngine and load advanced settings (admin/#/settings/advanced). Click "Export" button and save generated file, by default BlogML.xml. This file is in BlogML format, and Disqus can only read its
-                <a href="https://help.disqus.com/customer/portal/articles/472150"
-                    target="_blank">own custom format</a>, so we need to convert BlogML to Disqus import file. This <a href="https://github.com/rxtur/blogml2wp" target="_blank">console application</a> can do conversion or use this compiled executable (
-                    <a class="download"
-                        href="/blog/file.axd?file=/2016/Disqus/BlogML2Wp.zip">BlogML2Wp.zip (4.71 kb)</a>) if you don't want to deal with Visual Studio and source code. Once you have BlogML.Output.xml you ready to load your BlogEngine comments into Disqus.</p>
+                <a href="https://help.disqus.com/customer/portal/articles/472150" target="_blank">own custom format</a>, so we need to convert BlogML to Disqus import file. This <a href="https://github.com/rxtur/blogml2wp" target="_blank">console application</a>                can do conversion or use this compiled executable (
+                <a class="download" href="/blog/file.axd?file=/2016/Disqus/BlogML2Wp.zip">BlogML2Wp.zip (4.71 kb)</a>) if you don't want to deal with Visual Studio and source code. Once you have BlogML.Output.xml you ready to load your BlogEngine comments
+                into Disqus.</p>
             <h3>Importing Into Disqus</h3>
             <p>Importing into Disqus is pretty simple, navigate to <a href="https://import.disqus.com">https://import.disqus.com</a>, select your "forum" (site you created in the first step). Upload your BlogML.Output.xml using provided form and wait a little
                 for the file to be processed. Here is screen after loading small test file with 2 posts and 3 comments.</p>
@@ -101,6 +142,7 @@
 
         </div>
     </div>
+</div>
 
     </div>
     
